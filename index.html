@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IT-Solutions M. Schemmel - Ihr Partner für PC-Hilfe, Software-Entwicklung, Hardwarehandel und IT-Dienstleistungen.">
     <title>IT-Solutions M. Schemmel</title>
-    <link rel="stylesheet" href="{% static 'css/styles_homepage.css' %}">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="navbar">
-                <img class="logo" src="{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.png' %}" alt="Firmenlogo">
+                <img class="logo" src="logo.png" alt="Firmenlogo">
                 <ul class="nav-links">
                     <li><a href="#services">Leistungen</a></li>
                     <li><a href="#about">Über Uns</a></li>
                     <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="accounting/login">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -82,10 +80,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 IT-Solutions M. Schemmel. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 IT-Solutions M. Schemmel. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
-
-    <script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>
