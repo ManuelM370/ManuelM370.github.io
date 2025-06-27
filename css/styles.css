@@ -240,3 +240,14 @@ footer a:hover {
         text-align: center;
     }
 }
+
+.service-link {
+    text-decoration: none; /* keine Unterstreichung */
+    color: inherit;        /* Schriftfarbe übernehmen */
+    display: block;        /* damit der ganze Bereich klickbar ist */
+}
+.service-link:hover {
+    /* Optional: schöner Hover-Effekt */
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
