@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT-Solutions M. Schemmel - Ihr Partner für PC-Hilfe, Software-Entwicklung, Hardwarehandel und IT-Dienstleistungen.">
+    <title>IT-Solutions M. Schemmel</title>
+    <link rel="stylesheet" href="{% static 'css/styles_homepage.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <img class="logo" src="{{ request.scheme }}://{{ request.get_host }}{% static 'images/logo.png' %}" alt="Firmenlogo">
+                <ul class="nav-links">
+                    <li><a href="#services">Leistungen</a></li>
+                    <li><a href="#about">Über Uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="accounting/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Ihr IT-Partner für alle Bedürfnisse</h1>
+            <p>Von PC-Hilfe über Software-Entwicklung bis zum Hardwarehandel: Wir sind für Sie da.</p>
+            <a href="#services" class="btn">Mehr erfahren</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <h3>PC-Hilfe</h3>
+                    <p>Wir helfen Ihnen bei allen Problemen rund um Ihren PC und Ihre Peripheriegeräte.</p>
+                </div>
+                <div class="service">
+                    <h3>Software-Entwicklung</h3>
+                    <p>Individuelle Lösungen für Ihre Anforderungen, von Web-Anwendungen bis zu Desktop-Tools.</p>
+                </div>
+                <div class="service">
+                    <h3>Hardwarehandel</h3>
+                    <p>Wir bieten hochwertige Hardware zu fairen Preisen, angepasst an Ihre Bedürfnisse.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Über Uns</h2>
+            <p>IT-Solutions M. Schemmel steht für Qualität, Zuverlässigkeit und persönliche Betreuung. Mit langjähriger Erfahrung in der IT-Branche unterstützen wir Privat- und Geschäftskunden bei allen IT-Fragen.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Kontaktieren Sie uns</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 IT-Solutions M. Schemmel. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
