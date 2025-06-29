@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Kontaktieren Sie IT-Solutions M. Schemmel für IT-Hilfe, Datenrettung und Beratung." />
+    <title>Kontakt – IT-Solutions M. Schemmel</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <!--<img class="logo" src="images/logo.png" alt="Firmenlogo">-->
+                    <ul class="nav-links">
+                        <li><a href="index.html">Leistungen</a></li>
+                        <li><a href="ueber-uns.html">Über Uns</a></li>
+                        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Kontaktieren Sie uns</h1>
+                    <p>Wir freuen uns auf Ihre Anfrage und helfen Ihnen gerne weiter.</p>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2>Kontaktformular</h2>
+                <form action="https://formspree.io/f/xdkzygjl" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nachricht</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Absenden</button>
+                </form>
+
+                <h2>Kontaktinformationen</h2>
+                <p><strong>Telefon:</strong> <a href="tel:+491702410623">+49 170 2410623</a></p>
+                <p><strong>E-Mail:</strong> <a href="mailto:itsolutions_m.schemmel@yahoo.com">itsolutions_m.schemmel@yahoo.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 IT-Solutions M. Schemmel. Alle Rechte vorbehalten. <a href="impressum.html">Impressum</a> <a href="datenschutz.html">Datenschutz</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
