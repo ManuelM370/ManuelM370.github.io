@@ -280,6 +280,10 @@ main {
     background-image: url('../images/hardware.jpg');
 }
 
+.service-datenrettung {
+    background-image: url('../images/datenrettung.jpg');
+}
+
 /* Allgemeiner Stil für Service-Kacheln mit Bild */
 .service {
     position: relative;
