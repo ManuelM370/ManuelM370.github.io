@@ -266,3 +266,47 @@ html, body {
 
 main {
   flex: 1;
+
+/* Bild-Hintergründe für Services */
+.service-pc {
+    background-image: url('../images/pc-hilfe.jpg');
+}
+
+.service-software {
+    background-image: url('../images/software.jpg');
+}
+
+.service-hardware {
+    background-image: url('../images/hardware.jpg');
+}
+
+/* Allgemeiner Stil für Service-Kacheln mit Bild */
+.service {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text auf dunklem Bild */
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Overlay für bessere Lesbarkeit */
+.service::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.service h3,
+.service p {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
