@@ -27,9 +27,17 @@ header {
     flex-wrap: wrap;
 }
 
-.logo {
-    max-height: 300px;
-    width: auto;
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 200px;
+  }
 }
 
 .logo span {
