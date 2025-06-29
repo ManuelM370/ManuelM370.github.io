@@ -314,3 +314,23 @@ main {
     z-index: 1;
     text-align: left;
 }
+
+
+/* Beim Hover: Overlay ausblenden */
+.service:hover::before {
+    background: transparent;
+}
+
+/* Beim Hover: Text ausblenden */
+.service:hover h3,
+.service:hover p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Standard: sanfte Übergänge für Overlay und Text */
+.service::before,
+.service h3,
+.service p {
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
