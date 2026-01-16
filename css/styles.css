@@ -16,7 +16,7 @@ body {
 
 /* Header */
 header {
-    background-color: #2B2B2B;
+    background-color: #2b2b2b;
     padding: 20px 0;
 }
 
@@ -27,9 +27,17 @@ header {
     flex-wrap: wrap;
 }
 
-.logo {
-    max-height: 300px;
-    width: auto;
+.logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 150px;
+  }
 }
 
 .logo span {
@@ -49,7 +57,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-weight: 500;
 }
 
@@ -74,8 +82,8 @@ header {
 
 /* Hero-Sektion */
 #hero {
-    background-color: #2B2B2B;
-    color: #000000;
+    background-color: #2b2b2b;
+    color: #ffffff;
     text-align: center;
     padding: 00px 20px 60px;
     border-bottom: 4px solid #00aaff;
@@ -140,12 +148,12 @@ header {
 
 .service h3 {
     margin-top: 0;
-    color: #004080;
+    color: white;
 }
 
 .service p {
     font-size: 1rem;
-    color: #555;
+    color: white;
 }
 
 /* Über uns */
@@ -205,11 +213,21 @@ form button:hover {
 
 /* Footer */
 footer {
-    background-color: #2B2B2B;
-    color: #000000;
+    background-color: #2b2b2b;
+    color: #ffffff;
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #dddddd;
 }
 
 /* Medienabfragen */
@@ -231,4 +249,96 @@ footer {
     }
 }
 
+.service-link {
+    text-decoration: none; /* keine Unterstreichung */
+    color: inherit;        /* Schriftfarbe übernehmen */
+    display: block;        /* damit der ganze Bereich klickbar ist */
+}
+.service-link:hover {
+    /* Optional: schöner Hover-Effekt */
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+
+/* Bild-Hintergründe für Services */
+.service-pc {
+    background-image: url('../images/pc-hilfe.jpg');
+}
+
+.service-software {
+    background-image: url('../images/software.jpg');
+}
+
+.service-hardware {
+    background-image: url('../images/hardware.jpg');
+}
+
+.service-datenrettung {
+    background-image: url('../images/datenrettung.jpg');
+}
+
+/* Allgemeiner Stil für Service-Kacheln mit Bild */
+.service {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text auf dunklem Bild */
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Overlay für bessere Lesbarkeit */
+.service::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.service h3,
+.service p {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+
+/* Beim Hover: Overlay ausblenden */
+.service:hover::before {
+    background: transparent;
+}
+
+/* Beim Hover: Text ausblenden */
+.service:hover h3,
+.service:hover p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Standard: sanfte Übergänge für Overlay und Text */
+.service::before,
+.service h3,
+.service p {
+    transition: background 0.3s ease, opacity 0.3s ease;
+}
