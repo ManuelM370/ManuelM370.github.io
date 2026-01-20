@@ -284,6 +284,10 @@ main {
     background-image: url('../images/software.jpg');
 }
 
+.service-websites {
+    background-image: url('../images/webseiten.jpg');
+}
+
 .service-hardware {
     background-image: url('../images/hardware.jpg');
 }
@@ -342,3 +346,4 @@ main {
 .service p {
     transition: background 0.3s ease, opacity 0.3s ease;
 }
+
